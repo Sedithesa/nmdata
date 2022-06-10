@@ -1,17 +1,19 @@
 require(readxl)
 
-load_ <- function(name,format){
-  if(tolower(format) == 'csv'){
-    x = 'csv'
-  }
-  else if(tolower(format)== 'xlsx'){
-    x = 'xlsx'
-    database <- paste0(name,'.',format)
-    print(database)
-    db <- read_excel(database, na = ".")
+
+name <- 'Test_with_mistakes_small'
+file_type <- 'xlsx'
+
+
+test <- function(name,file_type){
+  if(tolower(file_type) == 'xlsx'){
+    data <- paste0(name,'.', file_type)
+    db <- read_excel(data)
+  }else if(tolower(file_type) == 'csv'){
+    data <- paste0(name,'.','csv')
+    db  <- data
   }else{
-    x = 'Unknown file format'
+    db <- 'Unknown file type'
   }
   return(db)
 }
-
