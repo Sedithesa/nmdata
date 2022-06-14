@@ -1,6 +1,13 @@
 
+#' function to import data file based on file type (either 'xlsx' or 'csv')
+#'
+#' @param name file name
+#' @param file_type Type of file xlsx or csv
+#' @keywords
+#' @export
+#' @examples
 
-# function to import data file based on file type (either 'xlsx' or 'csv')
+
 
 load.data <- function(name,file_type){
   if(tolower(file_type) == 'xlsx'){
