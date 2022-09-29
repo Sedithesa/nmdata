@@ -21,3 +21,4 @@ load.data <- function(name,file_type){
   }
   return(db)
 }
+
