@@ -4,13 +4,18 @@
 \alias{load.data}
 \title{function to import data file based on file type (either 'xlsx' or 'csv')}
 \usage{
-load.data(name, file_type)
+load.data(name, file_type, na_value)
 }
 \arguments{
-\item{name}{file name}
+\item{name}{file name without extension}
 
 \item{file_type}{Type of file xlsx or csv}
 }
 \description{
 function to import data file based on file type (either 'xlsx' or 'csv')
 }
+\examples{
+-
+}
+\keyword{csv}
+\keyword{xlsx}

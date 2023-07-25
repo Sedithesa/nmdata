@@ -6,7 +6,7 @@
 #' @param method method to calculate BSA
 #' @keywords BSA
 #' @export
-#' @examples
+#' @examples -
 
 
 BSA <- function(weight,height,method){

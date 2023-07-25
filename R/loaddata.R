@@ -3,9 +3,9 @@
 #'
 #' @param name file name without extension
 #' @param file_type Type of file xlsx or csv
-#' @keywords
+#' @keywords xlsx csv
 #' @export
-#' @examples
+#' @examples -
 
 
 

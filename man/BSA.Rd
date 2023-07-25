@@ -16,4 +16,7 @@ BSA(weight, height, method)
 \description{
 Calculate BSA with different methods
 }
+\examples{
+-
+}
 \keyword{BSA}
