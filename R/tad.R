@@ -1,9 +1,14 @@
 
 #' Calculate time after dose
+#' @description
+#' A function to take the columns with calendar date and clock times and uses
+#' this to calculate the time after dose. Calendar date and clock times should
+#' be as characters. The format has a default but can be provided as argument.
 #'
-#' @param DATE Date
-#' @param TIME Time
-#' @param method method to calculate TAD
+#' @param date The name of the date column (default is 'DATE')
+#' @param time The name of the time column (default is 'TIME')
+#' @param dose The name of the dose column (default is 'DOSE')
+#' @param format The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M:\%S" )
 #' @keywords TAD
 #' @export
 #' @examples -
@@ -13,14 +18,14 @@
 # Takes character values of DATE and TIME columns in format specified
 # in the function. Then creates a date time (DTTM) column.
 
-tad <- function(database,date='DATE',time='TIME',dose='DOSE',id='ID'){
+tad <- function(database,date='DATE',time='TIME',dose='DOSE',id='ID', format="%m/%d/%Y %H:%M:%S"){
   TAD <- c()
   db = database
   colnames(db)[colnames(db) == date] <- 'DATE'
   colnames(db)[colnames(db) == time] <- 'TIME'
   colnames(db)[colnames(db) == dose] <- 'DOSE'
 
-  db$DTTM <- as.POSIXct(paste(db$DATE, db$TIME), format="%m/%d/%Y %H:%M:%S")
+  db$DTTM <- as.POSIXct(paste(db$DATE, db$TIME), format=format)
 
   # arrange per ID and DTTM
   db <- db[order(db$ID,db$DTTM),]

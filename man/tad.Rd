@@ -4,17 +4,28 @@
 \alias{tad}
 \title{Calculate time after dose}
 \usage{
-tad(date, time)
+tad(
+  database,
+  date = "DATE",
+  time = "TIME",
+  dose = "DOSE",
+  id = "ID",
+  format = "\%m/\%d/\%Y \%H:\%M:\%S"
+)
 }
 \arguments{
-\item{DATE}{Date}
+\item{date}{The name of the date column (default is 'DATE')}
 
-\item{TIME}{Time}
+\item{time}{The name of the time column (default is 'TIME')}
 
-\item{method}{method to calculate TAD}
+\item{dose}{The name of the dose column (default is 'DOSE')}
+
+\item{format}{The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M:\%S" )}
 }
 \description{
-Calculate time after dose
+A function to take the columns with calendar date and clock times and uses
+this to calculate the time after dose. Calendar date and clock times should
+be as characters. The format has a default but can be provided as argument.
 }
 \examples{
 -
