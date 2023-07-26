@@ -3,6 +3,7 @@
 #'
 #' @param name file name without extension
 #' @param file_type type of file xlsx or csv
+#' @param na_value optional argument to give the value that specifies NA
 #' @keywords xlsx csv
 #' @export
 #' @examples -
