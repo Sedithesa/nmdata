@@ -7,9 +7,14 @@
 load.data(name, file_type, na_value)
 }
 \arguments{
+
 \item{name}{file name without extension}
 
+\item{name}{file name without the extension}
+
+
 \item{file_type}{Type of file xlsx or csv}
+\item{na_value}{optional argument to give the value that specifies NA}
 }
 \description{
 function to import data file based on file type (either 'xlsx' or 'csv')

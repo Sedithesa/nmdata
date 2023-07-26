@@ -2,7 +2,7 @@
 #' function to import data file based on file type (either 'xlsx' or 'csv')
 #'
 #' @param name file name without extension
-#' @param file_type Type of file xlsx or csv
+#' @param file_type type of file xlsx or csv
 #' @keywords xlsx csv
 #' @export
 #' @examples -
