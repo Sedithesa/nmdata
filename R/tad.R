@@ -5,13 +5,13 @@
 #' this to calculate the time after dose. Calendar date and clock times should
 #' be as characters. The format has a default but can be provided as argument.
 #'
-#' @param date The name of the date column (default is 'DATE')
-#' @param time The name of the time column (default is 'TIME')
+#' @param date The name of the date column (default is 'DATE') Should be as characters
+#' @param time The name of the time column (default is 'TIME') Should be as characters
 #' @param dose The name of the dose column (default is 'DOSE')
 #' @param format The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M:\%S" )
 #' @keywords TAD
 #' @export
-#' @examples -
+#' @examples
 
 
 # Renames date and time columns as DATE and TIME.

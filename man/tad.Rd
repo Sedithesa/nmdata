@@ -14,9 +14,9 @@ tad(
 )
 }
 \arguments{
-\item{date}{The name of the date column (default is 'DATE')}
+\item{date}{The name of the date column (default is 'DATE') Should be as characters}
 
-\item{time}{The name of the time column (default is 'TIME')}
+\item{time}{The name of the time column (default is 'TIME') Should be as characters}
 
 \item{dose}{The name of the dose column (default is 'DOSE')}
 
@@ -26,8 +26,5 @@ tad(
 A function to take the columns with calendar date and clock times and uses
 this to calculate the time after dose. Calendar date and clock times should
 be as characters. The format has a default but can be provided as argument.
-}
-\examples{
--
 }
 \keyword{TAD}
