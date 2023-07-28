@@ -3,7 +3,7 @@
 #' @param database name of the database
 #' @param time Name of the time column you want on the x-axis (e.g. 'TAD')
 #' @param dv Dependend variable (e.g. concentration 'DV')
-#'
+#' @export
 #' @examples
 
 
