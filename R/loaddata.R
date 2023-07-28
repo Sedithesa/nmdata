@@ -1,5 +1,7 @@
 
 #' function to import data file based on file type (either 'xlsx' or 'csv')
+#' @description
+#' function to import data file based on file type (either 'xlsx' or 'csv')
 #'
 #' @param name file name without extension
 #' @param file_type type of file xlsx or csv

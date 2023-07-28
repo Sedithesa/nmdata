@@ -1,8 +1,12 @@
+
+#' Create sequences for NONMEM dataset
+#' @description
 #' Create sequences for NONMEM dataset
 #'
 #' @param id_col Values from the (patient) ID column
 #' @param occ_col Values from the occasion (OCC) column
 #' @export
+#' @keywords seq_per_occ
 #' @examples  nmdataset$SEQ_IDS <- seq_per_id(ds$ID)
 #' @examples  nmdataset$SEQ_OCC <- seq_per_occ(ds$ID, ds$OCC)
 
