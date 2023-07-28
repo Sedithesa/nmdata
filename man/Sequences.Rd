@@ -27,3 +27,4 @@ nmdataset$SEQ_OCC <- seq_per_occ(ds$ID, ds$OCC)
 \examples{
 nmdataset$SEQ_IDS <- seq_per_id(ds$ID)
 nmdataset$SEQ_OCC <- seq_per_occ(ds$ID, ds$OCC)
+}
