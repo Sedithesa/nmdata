@@ -12,7 +12,7 @@
 
 
 
-load.data <- function(name,file_type,na_value){
+loaddata <- function(name,file_type,na_value){
   if(tolower(file_type) == 'xlsx'){
     data <- paste0(name,'.', file_type)
     if(missing(na_value)){
