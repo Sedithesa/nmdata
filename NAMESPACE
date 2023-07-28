@@ -3,3 +3,5 @@
 export(BSA)
 export(load.data)
 export(tad)
+export(Sequences)
+export(plot_data)
