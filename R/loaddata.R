@@ -9,7 +9,7 @@
 #' @keywords xlsx csv
 #' @export
 #' @examples -
-
+#' @import readxl
 
 
 loaddata <- function(name,file_type,na_value){

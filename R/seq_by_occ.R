@@ -7,8 +7,6 @@
 #' @param occ_col Values from the occasion (OCC) column
 #' @export
 #' @keywords seq_by_occ
-#' @examples  nmdataset$SEQ_IDS <- seq_per_id(ds$ID)
-#' @examples  nmdataset$SEQ_OCC <- seq_per_occ(ds$ID, ds$OCC)
 
 
 seq_by_occ <- function(id_col, occ_col){

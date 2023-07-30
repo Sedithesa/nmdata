@@ -4,8 +4,7 @@ Title: Functions for loading, transforming and shaping NONMEM datasets
 Version: 0.1.0
 Author: S.D.T. Sassen
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Functions for loading, transforming and shaping NONMEM datasets
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
