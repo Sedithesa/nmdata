@@ -4,12 +4,16 @@
 \alias{clsenv}
 \title{Clearing the global environment}
 \usage{
-clsenv(keep.vals, rm = T)
+clsenv(keep.vals = NULL, patterns = NULL, rm.self = FALSE, rm.show = FALSE)
 }
 \arguments{
-\item{keep.vals}{Vector of values that should be kept in the globalenvironment}
+\item{keep.vals}{Vector of values that should be kept in the global environment}
 
-\item{rm}{If not TRUE than function returns the values that would have been removed}
+\item{patterns}{Vector of patterns that should be kept in the global environment}
+
+\item{rm.self}{If not TRUE than function returns the values that would have been removed}
+
+\item{rm.show}{If not TRUE than function returns the values that would have been removed}
 }
 \description{
 Clearing the global environment
