@@ -4,7 +4,7 @@
 \alias{plot_data}
 \title{Plot raw nonmem data}
 \usage{
-plot_data(database, time = "TAD", dv = "DV")
+plot_data(database, time = "TAD", dv = "DV", xmax = "", logy = "", strat = "")
 }
 \arguments{
 \item{database}{name of the database}
@@ -12,6 +12,12 @@ plot_data(database, time = "TAD", dv = "DV")
 \item{time}{Name of the time column you want on the x-axis (e.g. 'TAD')}
 
 \item{dv}{Dependend variable (e.g. concentration 'DV')}
+
+\item{xmax}{optional: limit the x-axis to a value (only upper) (e.g. xmax=24)}
+
+\item{logy}{optional: log10 transform of y scale ('yes', 'y', 'true','T')}
+
+\item{strat}{optional: stratify, create facets (e.g. strat = 'CMT')}
 }
 \description{
 Plot raw nonmem data

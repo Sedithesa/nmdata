@@ -4,11 +4,13 @@
 #' A function to take the columns with calendar date and clock times and uses
 #' this to calculate the time after dose. Calendar date and clock times should
 #' be as characters. The format has a default but can be provided as argument.
+#' If the format is not correct it cannot calculate the time after dose and will
+#' generate a lot of NA's.
 #'
 #' @param date The name of the date column (default is 'DATE') Should be as characters
 #' @param time The name of the time column (default is 'TIME') Should be as characters
 #' @param dose The name of the dose column (default is 'DOSE')
-#' @param format The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M:\%S" )
+#' @param format The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M" )
 #' @keywords TAD
 #' @export
 #' @examples
@@ -18,7 +20,7 @@
 # Takes character values of DATE and TIME columns in format specified
 # in the function. Then creates a date time (DTTM) column.
 
-tad <- function(database,date='DATE',time='TIME',dose='DOSE',id='ID', format="%m/%d/%Y %H:%M:%S"){
+tad <- function(database,date='DATE',time='TIME',dose='DOSE',id='ID', format="%m/%d/%Y %H:%M"){
   TAD <- c()
   db = database
   colnames(db)[colnames(db) == date] <- 'DATE'

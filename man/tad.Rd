@@ -10,7 +10,7 @@ tad(
   time = "TIME",
   dose = "DOSE",
   id = "ID",
-  format = "\%m/\%d/\%Y \%H:\%M:\%S"
+  format = "\%m/\%d/\%Y \%H:\%M"
 )
 }
 \arguments{
@@ -20,11 +20,13 @@ tad(
 
 \item{dose}{The name of the dose column (default is 'DOSE')}
 
-\item{format}{The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M:\%S" )}
+\item{format}{The format of the date and time column (default "\%m/\%d/\%Y \%H:\%M" )}
 }
 \description{
 A function to take the columns with calendar date and clock times and uses
 this to calculate the time after dose. Calendar date and clock times should
 be as characters. The format has a default but can be provided as argument.
+If the format is not correct it cannot calculate the time after dose and will
+generate a lot of NA's.
 }
 \keyword{TAD}
