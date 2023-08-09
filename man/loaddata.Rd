@@ -4,14 +4,12 @@
 \alias{loaddata}
 \title{function to import data file based on file type (either 'xlsx' or 'csv')}
 \usage{
-loaddata(name, file_type, na_value)
+loaddata(name, na_value)
 }
 \arguments{
-\item{name}{file name without extension}
+\item{name}{file name (can use tab to open, including file format)}
 
-\item{file_type}{type of file xlsx or csv}
-
-\item{na_value}{optional argument to give the value that specifies NA}
+\item{na_value}{optional: argument to give the value that specifies NA}
 }
 \description{
 function to import data file based on file type (either 'xlsx' or 'csv')

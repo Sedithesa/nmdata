@@ -3,6 +3,7 @@
 export(ABW)
 export(BMI)
 export(BSA)
+export(FFM)
 export(IBW)
 export(LBW)
 export(clsenv)
