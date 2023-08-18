@@ -25,6 +25,7 @@ plot_data <- function(database, time = 'TAD', dv = 'DV', xmax = '', logy='',
   database <- database[database$MDV==0,]
 
   # Options
+  # !!!! NOTE TAD !!! might search for incorrect column name if not TAD
   if(missing(xmax)){
     xmax <-  max(database$TAD)
   }
