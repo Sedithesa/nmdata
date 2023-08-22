@@ -71,11 +71,13 @@ cond_nr <- as.numeric(tail(eigen_vals2, n=1))/as.numeric(eigen_vals2[[1]])
 
 
 
-#-------------------------------------------------------------------------------
 # ext file with final estimates
+#-------------------------------------------------------------------------------
+
 ext <- read.table('111.ext', skip=1, header=TRUE, sep='')
 ext2 <- ext[ext$ITERATION < 0 ,]
 finalest <- head(ext2, n=1)
 
+# can request with name e.g. finalest['THETA2']
 
 
