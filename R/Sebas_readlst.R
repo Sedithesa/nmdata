@@ -1,9 +1,14 @@
 
 # Open a test lst file from a nonmem run
 
-setwd("A:/02. Projects/BV100/BV100_120423")
+
+setwd('A:/02. Projects/Finished/Midazolam/NONMEM11')
+
+runnr <- '002c'
+run_lst <- paste0(runnr,'.lst')
+
 nmFile <- scan(
-  '012.lst',
+  run_lst,
   sep = "\n",
   what = character(),
   quiet = TRUE
@@ -59,10 +64,10 @@ if(grepl('E',eigen[7], fixed = T)){
 if(grepl('E',eigen[8], fixed = T)){
   eigen_vals <- paste(eigen_vals, eigen[8])
 }
-if(grepl('E',eigen[9], fixed = T)){
+if(grepl('E',eigen[9], fixed = T) & eigen[8] != " "){
   eigen_vals <- paste(eigen_vals, eigen[9])
 }
-if(grepl('E',eigen[10], fixed = T)){
+if(grepl('E',eigen[10], fixed = T)& eigen[9] != " "){
   eigen_vals <- paste(eigen_vals, eigen[10])
 }
 eigen_vals2 <- scan(text=eigen_vals, what="")
@@ -74,7 +79,9 @@ cond_nr <- as.numeric(tail(eigen_vals2, n=1))/as.numeric(eigen_vals2[[1]])
 # ext file with final estimates
 #-------------------------------------------------------------------------------
 
-ext <- read.table('111.ext', skip=1, header=TRUE, sep='')
+run_ext <- paste0(runnr,'.ext')
+
+ext <- read.table(run_ext, skip=1, header=TRUE, sep='')
 ext2 <- ext[ext$ITERATION < 0 ,]
 finalest <- head(ext2, n=1)
 
