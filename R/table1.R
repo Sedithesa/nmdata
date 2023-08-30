@@ -7,8 +7,7 @@
 #' @import tidyverse
 #' @export
 #'
-#' @examples
-#'
+
 
 table1 <- function(db, id='ID'){
   colnames(db)[colnames(db) == id] <- 'ID'

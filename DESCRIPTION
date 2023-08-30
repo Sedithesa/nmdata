@@ -15,5 +15,5 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     ggplot2,
-    readxl, tidyverse, xpose4
+    readxl, tidyverse, xpose4, gridExtra
 RoxygenNote: 7.2.3

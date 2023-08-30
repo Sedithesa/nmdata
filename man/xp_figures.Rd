@@ -15,7 +15,19 @@ xp_figures(
 )
 }
 \arguments{
-\item{stratify}{}
+\item{run}{The run number /(e.g. like '001/)}
+
+\item{stratify}{Stratify on item}
+
+\item{log}{Log transforms data}
+
+\item{idv}{Independent variable which can be changed}
+
+\item{col}{Color}
+
+\item{pch}{pch shape of markers lattice}
+
+\item{cex}{cex size of markers lattice}
 }
 \description{
 xpose4 validation figures using xpose4

@@ -6,9 +6,9 @@
 #' @param xmax optional: limit the x-axis to a value (only upper) (e.g. xmax=24)
 #' @param logy optional: log10 transform of y scale ('yes', 'y', 'true','T')
 #' @param strat optional: stratify, create facets (e.g. strat = 'CMT')
+#'
 #' @export
-#' @examples
-
+#' @import ggplot2
 
 plot_data <- function(database, time = 'TAD', dv = 'DV', xmax = '', logy='',
                       strat = ''){
@@ -26,9 +26,9 @@ plot_data <- function(database, time = 'TAD', dv = 'DV', xmax = '', logy='',
 
   # Options
   # !!!! NOTE TAD !!! might search for incorrect column name if not TAD
-  if(missing(xmax)){
-    xmax <-  max(database$TAD)
-  }
+  # if(missing(xmax)){
+  #   xmax <-  max(database$TAD)
+  # }
 
   # Plotting
 
@@ -38,9 +38,7 @@ plot_data <- function(database, time = 'TAD', dv = 'DV', xmax = '', logy='',
 
   if(tolower(logy) == 'y' | tolower(logy) == 'yes' | tolower(logy) == 'true' |
      tolower(logy) == 't'){
-    pl1 <- pl1 + scale_y_continuous(trans='log10',
-                    breaks=trans_breaks('log10', function(x) 10^x),
-                    labels=trans_format('log10', math_format(10^.x)))
+    pl1 <- pl1 + scale_y_continuous(trans='log10')
   }
 
   if(!missing(strat)){
