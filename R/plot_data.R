@@ -10,7 +10,7 @@
 #' @export
 #' @import ggplot2
 
-plot_data <- function(database, time = 'TAD', dv = 'DV', xmax = '', logy='',
+plot_data <- function(database, time = 'TIME', dv = 'DV', xmax = '', logy='',
                       strat = ''){
 
   # Error exceptions
@@ -23,17 +23,19 @@ plot_data <- function(database, time = 'TAD', dv = 'DV', xmax = '', logy='',
 
   # Database transformations
   database <- database[database$MDV==0,]
+  database[[dv]] <- as.numeric(database[[dv]])
+
+
 
   # Options
-  # !!!! NOTE TAD !!! might search for incorrect column name if not TAD
-  # if(missing(xmax)){
-  #   xmax <-  max(database$TAD)
-  # }
+  if(missing(xmax)){
+    xmax <-  max(database[[time]], na.rm = T)
+  }
 
   # Plotting
 
   pl1 <- ggplot(database) +
-    geom_point(aes_string(time,dv)) + xlim(0,xmax) +
+    geom_point(aes_string(time,dv), na.rm = T) + xlim(0,xmax) +
     theme_bw()
 
   if(tolower(logy) == 'y' | tolower(logy) == 'yes' | tolower(logy) == 'true' |
