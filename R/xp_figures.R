@@ -16,7 +16,7 @@
 #'
 
 
-xp_figures <- function(run, stratify='', log = '', idv ='', col = 'black', pch = 16, cex = 1){
+xp_figures <- function(run, stratify='', log = '', idv ='', col = 'black', pch = 16, cex = 1, sep_figs =''){
   newdb <- xpose4::xpose.data(run)
   if(!missing(idv)){change.xvardef(newdb,var='idv') <- idv}
   if(!missing(col)){
@@ -97,8 +97,12 @@ xp_figures <- function(run, stratify='', log = '', idv ='', col = 'black', pch =
       }
     }
 
-  # gof_figures <- list(dv_vs_pred=gof1,dv_vs_ipred=gof2, cwres_vs_idv=gof3, cwres_vs_pred = gof4)
 
   gof_figures <- gridExtra::grid.arrange(gof1,gof2,gof3,gof4)
+
+  if(tolower(sep_figs) == 'y' | tolower(sep_figs) == 'yes' | tolower(sep_figs) == 'true' | tolower(sep_figs) == 't' ){
+    gof_figures <- list(dv_vs_pred=gof1,dv_vs_ipred=gof2, cwres_vs_idv=gof3, cwres_vs_pred = gof4)
+  }
+
   return(gof_figures)
 }

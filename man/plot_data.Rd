@@ -4,7 +4,7 @@
 \alias{plot_data}
 \title{Plot raw nonmem data}
 \usage{
-plot_data(database, time = "TAD", dv = "DV", xmax = "", logy = "", strat = "")
+plot_data(database, time = "TIME", dv = "DV", xmax = "", logy = "", strat = "")
 }
 \arguments{
 \item{database}{name of the database}

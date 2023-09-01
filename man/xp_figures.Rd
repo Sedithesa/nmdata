@@ -7,7 +7,7 @@
 xp_figures(
   run,
   stratify = "",
-  log = "",
+  sep_figs = "",
   idv = "",
   col = "black",
   pch = 16,
@@ -19,7 +19,7 @@ xp_figures(
 
 \item{stratify}{Stratify on item}
 
-\item{log}{Log transforms data}
+\item{sep_figs}{sep_figs transforms data}
 
 \item{idv}{Independent variable which can be changed}
 
