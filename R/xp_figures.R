@@ -9,6 +9,7 @@
 #' @param col Color
 #' @param pch pch shape of markers lattice
 #' @param cex cex size of markers lattice
+#' @param sep_figs If true this seperates the figures into a list
 #'
 #' @return
 #' @export

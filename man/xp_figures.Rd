@@ -7,11 +7,12 @@
 xp_figures(
   run,
   stratify = "",
-  sep_figs = "",
+  log = "",
   idv = "",
   col = "black",
   pch = 16,
-  cex = 1
+  cex = 1,
+  sep_figs = ""
 )
 }
 \arguments{
@@ -19,7 +20,7 @@ xp_figures(
 
 \item{stratify}{Stratify on item}
 
-\item{sep_figs}{sep_figs transforms data}
+\item{log}{Log transforms data}
 
 \item{idv}{Independent variable which can be changed}
 
@@ -28,6 +29,8 @@ xp_figures(
 \item{pch}{pch shape of markers lattice}
 
 \item{cex}{cex size of markers lattice}
+
+\item{sep_figs}{If true this seperates the figures into a list}
 }
 \description{
 xpose4 validation figures using xpose4
