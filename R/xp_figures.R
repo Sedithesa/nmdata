@@ -13,9 +13,8 @@
 #'
 #' @return
 #' @export
-#' @import xpose4 gridExtra
-#'
-
+#' @importFrom xpose4 dv.vs.pred dv.vs.ipred cwres.vs.idv cwres.vs.pred
+#' @importFrom gridExtra grid.arrange
 
 xp_figures <- function(run, stratify='', log = '', idv ='', col = 'black', pch = 16, cex = 1, sep_figs =''){
   newdb <- xpose4::xpose.data(run)
